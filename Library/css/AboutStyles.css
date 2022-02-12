@@ -1,0 +1,266 @@
+/* Core Styles */
+body{
+    font-size: 20px;
+    color: #6a7199;
+    margin: 0;
+    background:url(../images/background.png);
+}
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+
+h1,h2{
+    margin: 0;
+    padding: 1em 0;
+}
+
+p{
+    margin: 0;
+    padding: 1em 1em;
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn:hover{
+    font-weight: bold;
+    color: black;
+}
+
+/* Social Media Icons */
+.icons{
+    top: 60%;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+.icons ul{
+    padding: initial;
+}
+
+.icons ul li{
+    list-style: none;
+    height: 35px;
+    width: 25px;
+    padding-top: 6px;
+    padding-left: 12px;
+    margin-top: 5px;
+    color: white;   
+}
+.facebook{
+    background: #3b5998;
+}
+.instagram{
+    background: #be280e;
+}
+.linkedin{
+    background: #007bb5;
+}
+.twitter{
+    background: #55acee;
+}
+.github{
+    background: rgb(26, 16, 16);
+}
+
+.icons ul li:hover{
+    padding-left: 40px;
+    transition: ease-in;
+    opacity: 0.7;
+}
+
+/* Navbar */
+.navbar{
+    width: 100% ;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+nav{
+    flex: 1;
+    padding-left: 60px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: medium;
+    color: #333;
+}
+
+/* Footer */
+#main-footer{
+    background: rgb(190, 79, 45);
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+span{
+    color: black;
+}
+
+/* About Showcase */
+#about-showcase{
+    text-align: center;
+    color: whitesmoke;
+    min-height: 600px;
+}
+
+#about-showcase p{
+    -webkit-text-stroke: 0.3px whitesmoke;
+}
+
+#about-showcase .as-image{
+    position: absolute;
+    background: grey url(../images/about-showcase.JPEG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    z-index:-1;
+}
+ 
+#about-showcase h1{
+    padding-top: 70px;
+    padding-bottom: 10px;
+
+}
+
+/* Founders */
+#team-section{
+    background: #333;
+    color: white;
+    text-align: center;
+    margin-top: 0.5em;
+    padding: 1.5em;
+}
+
+#team-section  ul li{
+    list-style: none;
+    line-height: 1.5em;
+    text-indent: -1.5em;
+    font-style: oblique;
+    display: flex;
+}
+
+#team-section ul li:first-child{
+    font-weight: bold;
+}
+
+#team-section ul li::before{
+    content: "\2022";
+    color: whitesmoke;
+    display: inline-block;
+    font-size: 2.2em;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Newsletter */
+.container{
+	width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#newsletter{
+    margin-top: 0.5em;
+	padding: 1em;
+	color: white;
+	background: rgb(12, 12, 12);
+    text-align: center;
+}
+
+#newsletter form{
+	margin-bottom: 15px;
+}
+
+
+#newsletter input[type="email"]{
+	height: 25px;
+	width: 100%;
+}
+
+#newsletter .button{
+    display: block;
+    text-transform: uppercase;;
+    width: 100%;
+    height: auto;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    background: coral;
+    border: none;
+    color: white;
+}
+
+#newsletter .button:hover{
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/* Media Queries */
+@media(min-width: 700px){
+ 
+    /* Social Media */
+    .icons ul li:hover{
+        padding-left: 150px;
+    }
+    
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr repeat(2,minmax(auto,25em)) 1fr;
+    }
+
+    /* Footer */
+    #main-footer div{
+        grid-column: span 2;
+    }
+
+    /* Newsletter,Founders */
+    .float{
+        grid-column: span 2;
+    }
+
+    #newsletter form{
+        margin-top: 1em;
+    }
+
+    #newsletter h1{
+        margin-top: 5px;
+    }
+
+    .container{
+        width: 65%;
+    }
+
+     /* About Showcase */
+     #about-showcase h1{
+        padding-top: 100px;
+        padding-bottom: 60px;
+    
+    }
+    .content-wrap{        
+        padding: 0 2em;
+    }
+
+    .content-wrap{
+        grid-column: 1/5;
+    }
+}
+
+
+
